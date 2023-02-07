@@ -74,13 +74,26 @@ WSGI_APPLICATION = 'plm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+#################  FOR DEBUG ####################
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+################# FOR PRODUCTION #################
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default' : {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vermahardware$default',
+        'USER': 'vermahardware',
+        'PASSWORD': 'CRvLxHSDtzw!7hj',
+        'HOST': 'vermahardware.mysql.pythonanywhere-services.com'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -125,7 +138,7 @@ STATIC_ROOT = '/home/vermahardware/plm/static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-## Debugging 
+## Debugging
 
 # STATIC_URL = 'static/'
 # STATICFILES_DIRS = [
