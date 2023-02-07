@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'plm.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
-#################  FOR DEBUG ####################
+#################  FOR DEBUGGING ####################
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -90,8 +90,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vermahardware$default',
         'USER': 'vermahardware',
-        'PASSWORD': 'CRvLxHSDtzw!7hj',
-        'HOST': 'vermahardware.mysql.pythonanywhere-services.com'
+        'PASSWORD': '2k20.lv@613',
+        'HOST': 'vermahardware.mysql.pythonanywhere-services.com',
+        'OPTION': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1"
+            }
     }
 }
 
@@ -129,6 +132,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+#################  FOR DEBUGGING ####################
+# STATIC_URL = 'static/'
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     '/var/www/static/',
+# ]
+
+################# FOR PRODUCTION #################
+
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/home/vermahardware/plm/static'
@@ -136,12 +148,3 @@ STATIC_ROOT = '/home/vermahardware/plm/static'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-## Debugging
-
-# STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-#     '/var/www/static/',
-# ]
