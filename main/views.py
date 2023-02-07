@@ -23,8 +23,10 @@ def LoginPage(request):
         else:
             return HttpResponse("You are not authorised")
 
-        
-    context = {}
+    year = dt.date.today().year    
+    context = {
+        'year': year
+    }
     return render(request, 'main/login.html', context)
 
 def LogoutUser(request):
