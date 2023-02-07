@@ -1,0 +1,36 @@
+body {
+    background-color: #BDCDD6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-body {
+    background-color: #93BFCF;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 3px solid #555;
+}
+
+.heading {
+    color: #6096B4;
+}
+
+#query-field {
+    display: inline-block;
+    width: 70%;
+    margin-right: 10px;
+}
+

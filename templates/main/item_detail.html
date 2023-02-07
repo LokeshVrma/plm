@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% block body %}
+<br>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h5>{{ item }}</h5>
+            <br>
+            <a class="btn btn-info" href="{% url 'update_item' item.id %}">Update Item</a>
+            <br>
+            <a class="btn btn-danger" href="{% url 'delete_item' item.id %}">Delete Item</a>
+        </div>    
+    </div>
+    <div class="col-md">
+        <div class="card card-body">
+            <h5 style="text-align:center;">Current Price</h5>
+            <br>
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th style="text-align:center;">Sales Price</th>
+                    <th style="text-align:center;">Purchase Price</th>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td style="text-align:center;">{{ item.sales_price }} ₹</td>
+                    <td style="text-align:center;">{{ item.purchase_price }} ₹</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}

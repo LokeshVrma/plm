@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% block body %}
+<br>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <h3 style="text-align:center;">Create Item</h3>
+            <form action="" method="post">
+                {% csrf_token %}
+                <br>
+                <h5>{{ form.item_name.label }}</h5>
+                {{ form.item_name }}
+                <br><br>
+                <h5>{{ form.sales_price.label }}</h5>
+                {{ form.sales_price }}
+                <br><br>
+                <h5>{{ form.purchase_price.label }}</h5>
+                {{ form.purchase_price }}
+                <div class="form-floating" style="text-align: center;">
+                    <button class="btn btn-primary btn-lg" type="submit">Save Item</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

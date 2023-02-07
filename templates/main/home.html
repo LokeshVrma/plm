@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% block body %}
+
+<br>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <div class="col-md">
+                <form action="" method="get">
+                    {% csrf_token %}
+                    <input type="text" name="query" id="query-field">
+                    <button class="btn btn-primary" type="submit">Search Item</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Item Name</th>
+                    <th>Sales Price</th>
+                </tr>
+                {% for item in item_detail %}
+                    <tr>
+                        <td></td>
+                        <td><a href="{% url 'item_detail' item.id %}">{{ item.item_name }}</a></td>
+                        <td>{{ item.sales_price }} ₹</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}

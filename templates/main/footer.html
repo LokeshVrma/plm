@@ -1,0 +1,22 @@
+{% load static %}
+
+<style>
+    #social-icons {
+        height: 30px;
+        width: 30px;
+    }
+</style>
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <span class="mb-3 mb-md-0 text-muted">&copy; 2022 <a href="https://lokeshvrma.github.io/cv/">Lokesh Verma</a></span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a href="https://github.com/LokeshVrma"><img id="social-icons" src="{% static 'img/github_icon.png' %}" alt="github-icon"></a></li>
+        <li class="ms-3"><a href="https://www.linkedin.com/in/lokesh-vrma/"><img id="social-icons" src="{% static 'img/linkedin_icon.png' %}" alt="linkedin-icon"></a></li>
+        <li class="ms-3"><a href="https://twitter.com/vrma_lokesh"><img id="social-icons" src="{% static 'img/twitter_icon.png' %}" alt="twitter-icon"></a></li>
+    </ul>
+  </footer>
+</div>
