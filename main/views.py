@@ -19,11 +19,11 @@ def LoginPage(request):
         if user is not None:
             login(request, user)
             return redirect('home')
-        
+
         else:
             return HttpResponse("You are not authorised")
 
-    year = dt.date.today().year    
+    year = dt.date.today().year
     context = {
         'year': year
     }
@@ -43,7 +43,7 @@ def home(request):
     year = dt.date.today().year
     context = {
         'item_detail': item_detail,
-        'year': year
+        'year': year,
     }
 
     return render(request, 'main/home.html', context)
@@ -77,7 +77,7 @@ def updateItem(request, pk):
     context = {
         'form': form
     }
-    
+
     return render(request, 'main/update_item.html', context)
 
 @login_required(login_url='login')
