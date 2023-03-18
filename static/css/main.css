@@ -1,5 +1,7 @@
 body {
     background-color: #BDCDD6;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 a {
